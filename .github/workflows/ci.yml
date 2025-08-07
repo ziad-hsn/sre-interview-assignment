@@ -2,12 +2,12 @@ name: Float CI
 
 # This workflow runs on any PR/Push requests to any branch except push requests to 'main', it runs test cases and leave PR comment with the test coverage.
 on:
+  pull_request:
+    branches:
+      - '*'
   push:
     branches-ignore:
-      - 'main'
-    pull_request:
-      branches:
-        - '*'
+        - 'main'
 
 # permissions for actions to comment on pull requests and install dependencies
 permissions:
