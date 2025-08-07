@@ -34,14 +34,12 @@ jobs:
       - name: Run tests
         id: tests
         continue-on-error: true # run rest of steps even if tests failed.
-        run: npm test -- --coverage
+        run: npx jest --coverage --coverageReporters json-summary # compatible wit jest coverage action
 
       - name: Comment Test Coverage
-        uses: AthleticNet/comment-test-coverage@1.1
-        if: github.event_name == 'pull_request'
+        uses: MishaKav/jest-coverage-comment@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: ./coverage/coverage-summary.json
+          summary-title: "Float Tests Coverage."
 
       # fail workflow if the tests failed.
       - name: Check test results
