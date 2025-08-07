@@ -1,0 +1,24 @@
+9de157d62c7e0455966f4d49855a4837
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.mapToPlanet = mapToPlanet;
+function mapToPlanet(planetData, destroyed) {
+    return {
+        name: planetData.name,
+        rotation_period: planetData.rotation_period,
+        orbital_period: planetData.orbital_period,
+        diameter: planetData.diameter,
+        climate: planetData.climate,
+        gravity: planetData.gravity,
+        terrain: planetData.terrain,
+        surface_water: planetData.surface_water,
+        population: planetData.population,
+        destroyed,
+        residents: planetData.residents,
+        films: planetData.films,
+        created: planetData.created,
+        edited: planetData.edited,
+        url: planetData.url,
+    };
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL3RtcC9zcmMvc2VydmljZXMvc2VydmljZS1tYXBwZXJzL21hcFRvUGxhbmV0LnRzIiwibWFwcGluZ3MiOiI7O0FBR0Esa0NBa0JDO0FBbEJELFNBQWdCLFdBQVcsQ0FBQyxVQUF1QixFQUFFLFNBQWtCO0lBQ3JFLE9BQU87UUFDTCxJQUFJLEVBQUUsVUFBVSxDQUFDLElBQUk7UUFDckIsZUFBZSxFQUFFLFVBQVUsQ0FBQyxlQUFlO1FBQzNDLGNBQWMsRUFBRSxVQUFVLENBQUMsY0FBYztRQUN6QyxRQUFRLEVBQUUsVUFBVSxDQUFDLFFBQVE7UUFDN0IsT0FBTyxFQUFFLFVBQVUsQ0FBQyxPQUFPO1FBQzNCLE9BQU8sRUFBRSxVQUFVLENBQUMsT0FBTztRQUMzQixPQUFPLEVBQUUsVUFBVSxDQUFDLE9BQU87UUFDM0IsYUFBYSxFQUFFLFVBQVUsQ0FBQyxhQUFhO1FBQ3ZDLFVBQVUsRUFBRSxVQUFVLENBQUMsVUFBVTtRQUNqQyxTQUFTO1FBQ1QsU0FBUyxFQUFFLFVBQVUsQ0FBQyxTQUFTO1FBQy9CLEtBQUssRUFBRSxVQUFVLENBQUMsS0FBSztRQUN2QixPQUFPLEVBQUUsVUFBVSxDQUFDLE9BQU87UUFDM0IsTUFBTSxFQUFFLFVBQVUsQ0FBQyxNQUFNO1FBQ3pCLEdBQUcsRUFBRSxVQUFVLENBQUMsR0FBRztLQUNwQixDQUFDO0FBQ0osQ0FBQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvdG1wL3NyYy9zZXJ2aWNlcy9zZXJ2aWNlLW1hcHBlcnMvbWFwVG9QbGFuZXQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUGxhbmV0IH0gZnJvbSAnLi4vLi4vdHlwZXMvZW50aXRpZXMudHlwZXMnO1xuaW1wb3J0IHsgU3dhcGlQbGFuZXQgfSBmcm9tICcuLi8uLi90eXBlcy9zd2FwaS50eXBlcyc7XG5cbmV4cG9ydCBmdW5jdGlvbiBtYXBUb1BsYW5ldChwbGFuZXREYXRhOiBTd2FwaVBsYW5ldCwgZGVzdHJveWVkOiBib29sZWFuKTogUGxhbmV0IHtcbiAgcmV0dXJuIHtcbiAgICBuYW1lOiBwbGFuZXREYXRhLm5hbWUsXG4gICAgcm90YXRpb25fcGVyaW9kOiBwbGFuZXREYXRhLnJvdGF0aW9uX3BlcmlvZCxcbiAgICBvcmJpdGFsX3BlcmlvZDogcGxhbmV0RGF0YS5vcmJpdGFsX3BlcmlvZCxcbiAgICBkaWFtZXRlcjogcGxhbmV0RGF0YS5kaWFtZXRlcixcbiAgICBjbGltYXRlOiBwbGFuZXREYXRhLmNsaW1hdGUsXG4gICAgZ3Jhdml0eTogcGxhbmV0RGF0YS5ncmF2aXR5LFxuICAgIHRlcnJhaW46IHBsYW5ldERhdGEudGVycmFpbixcbiAgICBzdXJmYWNlX3dhdGVyOiBwbGFuZXREYXRhLnN1cmZhY2Vfd2F0ZXIsXG4gICAgcG9wdWxhdGlvbjogcGxhbmV0RGF0YS5wb3B1bGF0aW9uLFxuICAgIGRlc3Ryb3llZCxcbiAgICByZXNpZGVudHM6IHBsYW5ldERhdGEucmVzaWRlbnRzLFxuICAgIGZpbG1zOiBwbGFuZXREYXRhLmZpbG1zLFxuICAgIGNyZWF0ZWQ6IHBsYW5ldERhdGEuY3JlYXRlZCxcbiAgICBlZGl0ZWQ6IHBsYW5ldERhdGEuZWRpdGVkLFxuICAgIHVybDogcGxhbmV0RGF0YS51cmwsXG4gIH07XG59Il0sInZlcnNpb24iOjN9

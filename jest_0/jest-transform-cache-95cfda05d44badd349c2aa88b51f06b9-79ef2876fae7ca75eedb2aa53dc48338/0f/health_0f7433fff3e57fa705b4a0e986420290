@@ -1,0 +1,7 @@
+b59cdcf562f9cfb6ac42b3f019c9870e
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = async (instance) => {
+    instance.get('/health', () => Promise.resolve({ healthy: true }));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL3RtcC9zcmMvYXBpL3JvdXRlcy9oZWFsdGgudHMiLCJtYXBwaW5ncyI6Ijs7QUFFQSxrQkFBZSxLQUFLLEVBQUUsUUFBeUIsRUFBRSxFQUFFO0lBQ2pELFFBQVEsQ0FBQyxHQUFHLENBQUMsU0FBUyxFQUFFLEdBQUcsRUFBRSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFBRSxPQUFPLEVBQUUsSUFBSSxFQUFFLENBQUMsQ0FBQyxDQUFDO0FBQ3BFLENBQUMsQ0FBQyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIvdG1wL3NyYy9hcGkvcm91dGVzL2hlYWx0aC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBGYXN0aWZ5SW5zdGFuY2UgfSBmcm9tICdmYXN0aWZ5JztcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgKGluc3RhbmNlOiBGYXN0aWZ5SW5zdGFuY2UpID0+IHtcbiAgaW5zdGFuY2UuZ2V0KCcvaGVhbHRoJywgKCkgPT4gUHJvbWlzZS5yZXNvbHZlKHsgaGVhbHRoeTogdHJ1ZSB9KSk7XG59O1xuIl0sInZlcnNpb24iOjN9

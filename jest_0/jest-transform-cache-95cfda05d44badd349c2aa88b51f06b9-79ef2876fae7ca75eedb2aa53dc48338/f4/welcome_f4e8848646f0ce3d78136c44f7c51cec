@@ -1,0 +1,11 @@
+2b78656cadd5cb410effa74269da16ac
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = async (instance) => {
+    instance.get('/welcome', async (_, reply) => {
+        return reply.code(200).send({
+            message: 'Welcome to the Float Services Team - Interview Assignment! 🚀🚀🚀'
+        });
+    });
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL3RtcC9zcmMvYXBpL3JvdXRlcy93ZWxjb21lLnRzIiwibWFwcGluZ3MiOiI7O0FBRUEsa0JBQWUsS0FBSyxFQUFFLFFBQXlCLEVBQUUsRUFBRTtJQUNqRCxRQUFRLENBQUMsR0FBRyxDQUNWLFVBQVUsRUFDVixLQUFLLEVBQUUsQ0FBaUIsRUFBRSxLQUFtQixFQUFFLEVBQUU7UUFDL0MsT0FBTyxLQUFLLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDLElBQUksQ0FBQztZQUMxQixPQUFPLEVBQUUsbUVBQW1FO1NBQzdFLENBQUMsQ0FBQztJQUNMLENBQUMsQ0FDRixDQUFDO0FBQ0osQ0FBQyxDQUFDIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbIi90bXAvc3JjL2FwaS9yb3V0ZXMvd2VsY29tZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBGYXN0aWZ5SW5zdGFuY2UsIEZhc3RpZnlSZXBseSwgRmFzdGlmeVJlcXVlc3QgfSBmcm9tICdmYXN0aWZ5JztcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgKGluc3RhbmNlOiBGYXN0aWZ5SW5zdGFuY2UpID0+IHtcbiAgaW5zdGFuY2UuZ2V0KFxuICAgICcvd2VsY29tZScsXG4gICAgYXN5bmMgKF86IEZhc3RpZnlSZXF1ZXN0LCByZXBseTogRmFzdGlmeVJlcGx5KSA9PiB7XG4gICAgICByZXR1cm4gcmVwbHkuY29kZSgyMDApLnNlbmQoe1xuICAgICAgICBtZXNzYWdlOiAnV2VsY29tZSB0byB0aGUgRmxvYXQgU2VydmljZXMgVGVhbSAtIEludGVydmlldyBBc3NpZ25tZW50ISDwn5qA8J+agPCfmoAnXG4gICAgICB9KTtcbiAgICB9LFxuICApO1xufTtcbiJdLCJ2ZXJzaW9uIjozfQ==

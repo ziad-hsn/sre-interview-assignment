@@ -1,0 +1,10 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["github>floatschedule/renovate-config:default-node-js-alpine"],
+    "assignees": [
+      "@christiandewitt"
+    ],
+    "baseBranches": [
+        "master"
+    ]
+}

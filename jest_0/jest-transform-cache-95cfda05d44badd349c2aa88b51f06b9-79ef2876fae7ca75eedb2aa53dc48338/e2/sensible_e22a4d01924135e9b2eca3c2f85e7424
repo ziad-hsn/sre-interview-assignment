@@ -1,0 +1,17 @@
+f76a45679687d9347e243f3aef80c297
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const sensible_1 = __importDefault(require("@fastify/sensible"));
+const fastify_plugin_1 = __importDefault(require("fastify-plugin"));
+/**
+ * This plugins adds some utilities to handle http errors
+ *
+ * @see https://github.com/fastify/fastify-sensible
+ */
+exports.default = (0, fastify_plugin_1.default)(async (instance) => {
+    instance.register(sensible_1.default);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL3RtcC9zcmMvcGx1Z2lucy9zZW5zaWJsZS50cyIsIm1hcHBpbmdzIjoiOzs7OztBQUFBLGlFQUF5QztBQUV6QyxvRUFBZ0M7QUFFaEM7Ozs7R0FJRztBQUNILGtCQUFlLElBQUEsd0JBQUUsRUFBQyxLQUFLLEVBQUUsUUFBeUIsRUFBRSxFQUFFO0lBQ3BELFFBQVEsQ0FBQyxRQUFRLENBQUMsa0JBQVEsQ0FBQyxDQUFDO0FBQzlCLENBQUMsQ0FBQyxDQUFDIiwibmFtZXMiOltdLCJzb3VyY2VzIjpbIi90bXAvc3JjL3BsdWdpbnMvc2Vuc2libGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNlbnNpYmxlIGZyb20gJ0BmYXN0aWZ5L3NlbnNpYmxlJztcbmltcG9ydCB7IEZhc3RpZnlJbnN0YW5jZSB9IGZyb20gJ2Zhc3RpZnknO1xuaW1wb3J0IGZwIGZyb20gJ2Zhc3RpZnktcGx1Z2luJztcblxuLyoqXG4gKiBUaGlzIHBsdWdpbnMgYWRkcyBzb21lIHV0aWxpdGllcyB0byBoYW5kbGUgaHR0cCBlcnJvcnNcbiAqXG4gKiBAc2VlIGh0dHBzOi8vZ2l0aHViLmNvbS9mYXN0aWZ5L2Zhc3RpZnktc2Vuc2libGVcbiAqL1xuZXhwb3J0IGRlZmF1bHQgZnAoYXN5bmMgKGluc3RhbmNlOiBGYXN0aWZ5SW5zdGFuY2UpID0+IHtcbiAgaW5zdGFuY2UucmVnaXN0ZXIoc2Vuc2libGUpO1xufSk7XG4iXSwidmVyc2lvbiI6M30=
