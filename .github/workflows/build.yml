@@ -1,0 +1,67 @@
+# This workflow builds a Docker image, pushes it to ttl.sh, and sends a notification, it only run on push requests to 'main'.
+
+name: Float Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-notify:
+    name: Build Docker image and send Slack notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js '22'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm' # caching npm dependencies into pack-lock.json
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests on main
+        run: npm test
+
+      # ttl.sh is an anonymous registry, so no login is required.
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Generate a unique name for the image using uuidgen
+      - name: Generate image name
+        id: uuid
+        run: echo "IMAGE_ID=$(uuidgen)" >> $GITHUB_OUTPUT
+
+      - name: Build and push temporary image to ttl.sh
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ttl.sh/${{ steps.uuid.outputs.IMAGE_ID }}:1m # Tag the image for ttl.sh with a 1-minute expiry
+          cache-from: type=gha # get image from github actions cache.
+          cache-to: type=gha,mode=max # cache image to github actions cache including all layers.
+
+      # This step runs only if all previous steps in the job were successful
+      - name: Send Slack Notification on Success
+        if: success()
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: '✅ Docker image built successfully. It is available for 1 minute at `ttl.sh/${{ steps.uuid.outputs.IMAGE_ID }}:1m`'
+          SLACK_COLOR: 'good'
+          SLACK_TITLE: 'Docker Build Succeeded'
+
+      # This step runs if any previous step in the job failed
+      - name: Send Slack Notification on Failure
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_MESSAGE: '❌ Docker build failed on `main` for commit `${{ github.sha }}`. <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View Logs>'
+          SLACK_COLOR: 'danger'
+          SLACK_TITLE: 'Docker Build Failed on Main'
