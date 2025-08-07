@@ -4,45 +4,70 @@ Welcome to the Float SRE Team - Interview Assignment!
 
 ## Problem Statement
 
-The Float development team have built this application and now they want to get:
+The Float development team has built this application and now they want to:
 
-- The tests running in Github Actions.
-- The image being built when a branch is merged to master.
+- Run the application’s tests in GitHub Actions.
+- Build and publish an image whenever a branch is merged to `main`.
 
-They need some support from the SRE team.
+They need support from the SRE team to set this up.
 
-## Task Description
+### Task Description
 
-Can you build a CI pipeline for the application which the devs can then re-use for other applications.
+Build a CI pipeline for the application that developers can reuse for other applications.
 
-## Basic Requirements
+---
 
-- If the tests pass the application should build a new release image.
-- Tests should run against all branches.
-- If you run short of time please take time to write down what else you would have liked to have done.
+### Basic Requirements
 
-## Image Registry
+Your solution **must** meet all of the following:
 
-ttl.sh is a free registry which we'd advise to use in this assignment with a low TTL (1m): https://ttl.sh
+1. **Run tests inside the image being built for use**.
+2. **Run tests against every branch** (every push to any branch, not only `main`).
+3. **If tests pass, build a new release image** and push it to a container registry (`ttl.sh` recommended).
+4. **Provide a way for developers to see test results promptly** (e.g., in PRs or elsewhere).
 
-## Evaluation Criteria
+### Image Registry
 
-Your solution will be evaluated based on the following criteria:
+We recommend using [`ttl.sh`](https://ttl.sh/) as a free container registry with a low TTL (e.g., 1 minute).
 
-- **Usability:** Adding PR comments for failing tests, considering integrating notification events or other useability actions that could support our development teams in making them more efficient.
-- **Security Best Practices:** Follow general security best practices. Use your best judgement to determine what the boundaries should be.
-- **Scalability and Robustness:** Design your solution to be scalable and robust, considering factors like performance, error handling, and scalability.
-- **Maintainability of Code:** Write clean, modular, and maintainable configuration with appropriate documentation and comments.
-- **Git Commit Best Practices:** Contribute to the repository using Git commit best practices, making logical and granular commits.
+---
 
-## Out of Scope
+### Evaluation Criteria
 
-The following items are considered out of scope for this test:
+Your submission will be scored against the following:
 
-- Don't worry about deployments.
+- **Usability** – Developers receive actionable feedback from the pipeline (e.g., PR comments, Slack notifications, clear logs).
+- **Security Best Practices** – Secrets handled appropriately; no sensitive values committed to the repo.
+- **Scalability & Robustness** – Efficient build times, caching, parallelism, and resilience against common errors.
+- **Maintainability** – Clean, modular, and reusable code with clear documentation.
+- **Git Commit Best Practices** – Logical, granular commits with meaningful messages.
 
-## Submission
+---
 
-When you have completed the assignment, please include any necessary instructions or documentation for running and testing your solution.
+### Out of Scope
 
-Feel free to reach out if you have any questions or need any clarifications. Good luck!
+- Application deployment.
+
+---
+
+### Submission
+
+Please include:
+
+- Instructions for running and testing your solution.
+- Any notes on additional features you would have added if you had more time.
+- **Highly encouraged**: Record a short loom video (5 mins max) covering:
+    - Your overall approach to solving the problem.
+    - Key design decisions and trade-offs you made.
+    - Anything you would do differently or add if you had more time.
+
+### AI Use Expectations
+
+We expect that you may use AI tools (such as GitHub Copilot, ChatGPT, etc.) as part of your workflow.
+
+Please follow these guidelines:
+
+1. **Use AI as you normally would** in your day-to-day work.
+2. In your submission, share **how AI contributed** to your final solution — for example, whether it helped with code generation, debugging, or research.
+3. The focus is on a **demonstration covering all requirements**, not a production-ready or fully polished solution.
+4. Thoughtful, appropriate use of AI is acceptable and encouraged — but you must **fully understand and take ownership** of the final solution.
