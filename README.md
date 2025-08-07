@@ -60,6 +60,10 @@ Please include:
     - Your overall approach to solving the problem.
     - Key design decisions and trade-offs you made.
     - Anything you would do differently or add if you had more time.
+- Please aim to complete the assignment within 2 hours. We aren’t looking for perfection, we just want to see what you can do within that timeframe.
+- Kindly send your submission to Julia via email within 3–4 days. If you need more time, just let us know; we’re happy to accommodate!
+
+Once we receive your completed assignment, we’ll send a small token of appreciation to thank you for the time and effort you’ve invested. We really appreciate it!
 
 ### AI Use Expectations
 
